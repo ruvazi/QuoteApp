@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory;
 
 import entities.Quote;
 
-public class QuoteFacade {
+public class QuoteFacade{
 
 	private static QuoteFacade instance;
     private static EntityManagerFactory emf;
@@ -68,6 +68,23 @@ public class QuoteFacade {
         	em.close();
         }
 	
+    }
+    
+    public Quote getRandomOne() {
+    	
+    	//SELECT * FROM table_name ORDER BY RAND() LIMIT 1;
+    	return null;
+    }
+	
+	public Quote positiveQuoteScore(Long id){
+		
+		//update QUOTE c set score = score + 1 where c.id=:id
+    	return null;
+    }
+	
+	public Quote negativeQuoteScore(Long id){
+		//update QUOTE c set score = score - 1 where c.id=:id
+    	return null;
     }
     
     
