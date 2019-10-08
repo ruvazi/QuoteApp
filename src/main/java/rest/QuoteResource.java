@@ -51,9 +51,37 @@ public class QuoteResource {
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public String getQuoteList() {
-		;
+		
 		List<Quote> allQuotes = FACADE.getQuoteList();
 		// System.out.println("--------------->" All quotes from db:
 		return GSON.toJson(allQuotes);
 	}
+	
+	@Path("getRandomQuote")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public String getRandomt() {
+		
+		Quote quote = FACADE.getRandomOne();
+		// System.out.println("--------------->" random quote from db:
+		return GSON.toJson(quote);
+	}
+	
+	@Path("positiveQuoteScore")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public void positiveQuoteScore(Long Id) {
+		FACADE.positiveQuoteScore(Id);
+		// System.out.println("--------------->" give quote positive score +1 by Id:
+	}
+	
+	@Path("negativeQuoteScore")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public void negativeQuoteScore(Long Id) {
+		FACADE.negativeQuoteScore(Id);
+		// System.out.println("--------------->" give quote negative score -1 by Id:
+	}
+	
+	
 }
