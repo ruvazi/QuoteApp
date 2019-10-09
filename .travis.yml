@@ -21,8 +21,8 @@ before_script:
 
 # TODO Add variable to make it simple to be reusable for projects
 #- export DEBIAN_FRONTEND="noninteractive";
-#- PW="123test"
-#- USER_NAME="dev"
+#- PW="RVZeave_yabe_2"
+#- USER_NAME="root"
 
 #- sudo apt-get clean
 #- sudo rm -r /var/lib/apt/lists/*
